@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<SCRIPT>
+    function time() {
+        var currentdate = new Date();
+        var timenow = + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+        document.getElementById("datebtn").innerHTML = "The time is = " + timenow;
+    }
+</SCRIPT>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <h2>Hello World</h2>
+    <p></p>
+    <p></p>
+    <button type="button" onclick="time()">Click on me!</button>
+    <p></p>
+    <p></p>
+    <p id="datebtn">The current time is =</p>
+
+</div>
