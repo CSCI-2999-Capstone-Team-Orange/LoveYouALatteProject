@@ -1,6 +1,7 @@
 ﻿using LoveYouALatte.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,9 +19,23 @@ namespace LoveYouALatte.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string currentTime = "")
         {
-            return View();
+            TimeModel vm = new TimeModel();
+            vm.CurrentTime = currentTime;
+
+            //Display the last time the button was clicked
+            string connectionString = "server=aa1lvp8rxcqhtjt.ccbmorow75ms.us-east-1.rds.amazonaws.com; port=3306; database=loveyoualattedb; uid=test; pwd=test1234;";
+            MySqlDatabase db = new MySqlDatabase(connectionString);
+            using (MySqlConnection conn = db.Connection)
+            {
+                var cmd = conn.CreateCommand() as MySqlCommand;
+                cmd.CommandText = @"SELECT log_time FROM loveyoualattedb.log_time ORDER BY log_time_id DESC LIMIT 1";
+
+                vm.CurrentTime = cmd.ExecuteScalar().ToString();
+            }
+
+            return View(vm);
         }
 
         public IActionResult Privacy()

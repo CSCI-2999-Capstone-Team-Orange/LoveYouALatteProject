@@ -1,4 +1,5 @@
-﻿@{
+﻿@model TimeModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -11,7 +12,10 @@
     @using (Html.BeginForm("AddTime", "Time", FormMethod.Post))
     {
         <input id="logTimeBtn" type="submit" value="Log Time">
-
+        @if (Model.CurrentTime != "")
+        {
+            <h4>The button was last clicked on @Model.CurrentTime</h4>
+        }
     }
 
 </div>

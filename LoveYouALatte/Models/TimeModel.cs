@@ -7,6 +7,6 @@ namespace LoveYouALatte.Models
 {
     public class TimeModel
     {
-        public DateTime CurrentTime { get; set; }
+        public string CurrentTime { get; set; }
     }
 }

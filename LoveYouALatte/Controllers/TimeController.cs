@@ -20,24 +20,20 @@ namespace LoveYouALatte.Controllers
         [HttpPost]
         public ActionResult AddTime()
         {
-            TimeModel viewModel = new TimeModel();
             DateTime currentTime = DateTime.Now;
-            viewModel.CurrentTime = currentTime;
 
             MySqlDatabase db = new MySqlDatabase(connectionString);
             using (MySqlConnection conn = db.Connection)
             {
                 var cmd = conn.CreateCommand() as MySqlCommand;
                 cmd.CommandText = @"INSERT INTO log_time(log_time) VALUES ('" + currentTime.ToString("yyyy/MM/dd HH:mm:ss") + "')";
-                //cmd.Parameters.AddWithValue("@Time", );
 
                 cmd.ExecuteNonQuery();
             }
                 
 
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home", new { currentTime = currentTime });
         }
     }
 }
-//string time = DateTime.Now.ToString("h:mm:ss tt");
