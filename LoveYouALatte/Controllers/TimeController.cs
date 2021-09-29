@@ -20,7 +20,9 @@ namespace LoveYouALatte.Controllers
         [HttpPost]
         public ActionResult AddTime()
         {
-            DateTime currentTime = DateTime.Now;
+            DateTime utcTime = DateTime.UtcNow;
+            var easternTime = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            DateTime currentTime = TimeZoneInfo.ConvertTimeFromUtc(utcTime, easternTime);
 
             MySqlDatabase db = new MySqlDatabase(connectionString);
             using (MySqlConnection conn = db.Connection)
