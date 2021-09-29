@@ -37,8 +37,19 @@ namespace LoveYouALatte.Controllers
 
             return View(vm);
         }
-
-        public IActionResult Privacy()
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+        public IActionResult Menu()
         {
             return View();
         }
