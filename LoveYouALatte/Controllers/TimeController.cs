@@ -15,7 +15,7 @@ namespace LoveYouALatte.Controllers
    
     public class TimeController : Controller
     {
-        string connectionString = "server=aa1lvp8rxcqhtjt.ccbmorow75ms.us-east-1.rds.amazonaws.com; port=3306; database=loveyoualattedb; uid=test; pwd=test1234;";
+        string connectionString = "server=aau5bw81zij6sr.ccbmorow75ms.us-east-1.rds.amazonaws.com; port=3306; database=loveyoualattedb; uid=test; pwd=test1234;";
 
         [HttpPost]
         public ActionResult AddTime()
