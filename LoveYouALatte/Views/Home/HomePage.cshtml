@@ -1,8 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+@{
+    Layout = "~/Views/Shared/_HomePageLayout.cshtml";
+}
+
+
+@{
+    ViewData["Title"] = "Love You a Latte";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Home page</p>
 
-<p>Testing push commit</p>
+
+<div id="coffeeImages">
+
+    <img id="CP1" src="~/images/1-latte-art-dragon (1).jpg" alt="Dragon Coffee">
+
+
+
+    <p id="CT1">
+        Welcome to Love You A Latte. We are vegan, farm-to-table, 100% organic, independently owned coffee shop.
+        We specialize in providing the best coffee and service in Columbus, Ohio.
+    </p>
+
+    <p id="CT2">
+        Share your experience at Love you a latte with our hashtag. #LoveALatte #LYAL on social
+    </p>
+
+    <img id="CP2" src="~/images/Iced-Coffee-11.jpg" alt="Iced Coffee">
+</div>
+    
+
+</div>
+
+
+
+
