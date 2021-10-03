@@ -69,3 +69,32 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+/* Style the navigation menu */
+.myNavbar {
+    width: 100%;
+    background-color: #cc573b;
+    overflow: auto;
+}
+
+/* Navigation links */
+.myNavbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 16.66%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.myNavbar a:hover {
+    background-color: #e5874d;
+}
+
+/* Style the current/active link */
+.myNavbar a.active {
+    background-color: #e5874d;
+}
