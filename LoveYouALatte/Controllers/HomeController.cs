@@ -39,6 +39,7 @@ namespace LoveYouALatte.Controllers
         }
         public IActionResult HomePage()
         {
+            
             return View();
         }
         public IActionResult FAQ()
