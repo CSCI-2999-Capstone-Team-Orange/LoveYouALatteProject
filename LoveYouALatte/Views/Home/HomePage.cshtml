@@ -1,8 +1,4 @@
 ﻿@{
-    Layout = "~/Views/Shared/_CustomLayout.cshtml";
-}
-
-@{
     Layout = "~/Views/Shared/_HomePageLayout.cshtml";
 }
 
@@ -10,31 +6,41 @@
 @{
     ViewData["Title"] = "Love You a Latte";
 }
-<h1>@ViewData["Title"]</h1>
-
-
-
-<div id="coffeeImages">
-
-    <img id="CP1" src="~/images/1-latte-art-dragon (1).jpg" alt="Dragon Coffee">
-
-
-
-    <p id="CT1">
-        Welcome to Love You A Latte. We are vegan, farm-to-table, 100% organic, independently owned coffee shop.
-        We specialize in providing the best coffee and service in Columbus, Ohio.
-    </p>
-
-    <p id="CT2">
-        Share your experience at Love you a latte with our hashtag. #LoveALatte #LYAL on social
-    </p>
-
-    <img id="CP2" src="~/images/Iced-Coffee-11.jpg" alt="Iced Coffee">
-</div>
-    
-
+<div clss="jumbotron">
+    <h1>@ViewData["Title"]</h1>
 </div>
 
+<br />
+<div class="row">
+
+    <div class="col-md-6">
+        <img class="images" src="~/images/1-latte-art-dragon (1)-400.jpg" alt="Dragon Coffee">
+    </div>
+
+    <div class="col-md-6">
+        <h4 class="copy">
+            Welcome to love you a latte. we are vegan, farm-to-table, 100% organic, and independently owned coffee shop.
+            we specialize in providing the best coffee and service in columbus, ohio.
+        </h4>
+    </div>
+
+
+</div>
+<br />
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="copy">
+            Share your experience at Love you a latte with our hashtag. #LoveALatte #LYAL on social
+        </h4>
+    </div>
+
+    <div class="col-md-6">
+        <img class="images" src="~/images/Iced-Coffee-11-400.jpg" alt="Iced Coffee">
+    </div>
+
+</div>
 
 
 
