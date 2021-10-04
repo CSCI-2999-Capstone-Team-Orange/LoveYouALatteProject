@@ -55,20 +55,30 @@
         <p>Here at Love You A Latte we have deep values on tegridy. We believe without co-operation with tegridy farms we wouldn't have integrity.</p>
     </div>
 
-    <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <button class="accordion">Frequently Asked Questions</button>
+    <div class="panel">
+        <p>What is our store hours?.</p>
+        <p>Our cafes are open Mondays through Sundays from 9:00am to 5:00pm</p>
+        <p>Who are our Suppliers?</p>
+        <p>All ingredients are sustainably sourced from local farmers like: Astro farms, Buckeye farms and Nature's dairy</p>
+        <p>What is our return policy?</p>
+        <p>If you dont love your latte for any reason, you can return for a full refund or replacement, no questions asked!</p>
+    </div>
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
     </script>
-    </body>
+</body>
