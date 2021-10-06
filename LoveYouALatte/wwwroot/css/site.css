@@ -98,3 +98,14 @@ body {
 .myNavbar a.active {
     background-color: #e5874d;
 }
+
+.btn-orange {
+    color: #fff;
+    background-color: #cc573b;
+    border-color: #C24D31;
+}
+.btn-orange:hover {
+    color: #fff;
+    background-color: #e5874d;
+    border-color: #cc573b;
+}

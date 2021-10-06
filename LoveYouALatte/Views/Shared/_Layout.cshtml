@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="~/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
-        <div class="myNavbar">
-            <a asp-area="" asp-controller="Home" asp-action="Index">Index</a>
+    <div class="myNavbar">
+        <a asp-area="" asp-controller="Home" asp-action="HomePage">Home Page</a>
 
-            <a asp-area="" asp-controller="Home" asp-action="HomePage">Home Page</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Index</a>
 
-            <a asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a>
+        <a asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a>
 
-            <a><img src="~/images/LYAL_Logo_100.jpg" alt="LYAL Logo" style="width: 20px;"></a>
+        @*<a><img src="~/images/LYAL_Logo_100.jpg" alt="LYAL Logo" style="width: 20px;"></a>*@
 
-            <a asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+        <a asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
 
-            <a asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
+        <a asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
 
-        </div>
+        <a asp-area="" asp-controller="Home" asp-action="Checkout"><i class="fa fa-shopping-cart"></i></a>
+
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
