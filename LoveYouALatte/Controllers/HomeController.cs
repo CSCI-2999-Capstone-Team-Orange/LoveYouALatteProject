@@ -25,7 +25,7 @@ namespace LoveYouALatte.Controllers
             vm.CurrentTime = currentTime;
 
             //Display the last time the button was clicked
-            string connectionString = "server=test.ccbmorow75ms.us-east-1.rds.amazonaws.com; port=3306; database=loveyoualattedb; uid=test; pwd=test1234;";
+            string connectionString = "server=aa124gktif3j980.cjiyeakoxxft.us-east-1.rds.amazonaws.com; port=3306; database=loveyoualattedb; uid=test; pwd=orange1234;";
             MySqlDatabase db = new MySqlDatabase(connectionString);
             using (MySqlConnection conn = db.Connection)
             {
